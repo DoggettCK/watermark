@@ -25,11 +25,11 @@ def output_directory(out_dir=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Strip EXIF data from images')
 
-    parser.add_argument('--output', dest='output_dir', type=str)
-    parser.add_argument('-o', dest='output_dir', type=str)
+    parser.add_argument('-o', '--output', dest='output_dir', type=str, metavar='DIR', help='set output directory. Defaults to "./output"')
     parser.set_defaults(output_dir=None)
-    parser.add_argument('--debug', dest='debug', action='store_true')
+    parser.add_argument('--debug', dest='debug', action='store_true', help='print helpful debugging information')
     parser.set_defaults(debug=False)
+    parser.add_argument('input_file', nargs='+', help='path(s) to file(s) to scrub')
 
     (args, remaining) = parser.parse_known_args()
 
