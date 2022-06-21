@@ -1,5 +1,5 @@
 ImageHash==4.0
-numpy==1.18.0
+numpy==1.22.0
 opencv-python==4.1.2.30
 Pillow==6.2.1
 python-constraint==1.4.0
